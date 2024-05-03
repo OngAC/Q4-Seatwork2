@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<title>Seatwork #2</title>
+
+<style>
+
+	body {
+		background-color: rgb(202,196,193);
+		font-family: "Lora", serif;
+		  font-optical-sizing: auto;
+		  font-weight: <weight>;
+		  font-style: normal;
+	}
+
+	.o {
+		display: flex;
+		border: double white;
+		margin-top: 200px;
+		margin-bottom: 200px;
+		margin-left: 50px;
+		margin-right: 50px;
+		padding: 100px;
+	}
+
+	.t {
+		display: inline-block;
+		margin-top: 50px;
+		margin-bottom: 80px;
+		margin-right: 50px;
+
+	}
+
+	.r {
+		display: inline-block;
+		margin-top: 50px;
+	}
+
+	.btns {
+		text-align: center;
+		vertical-align: middle;
+		margin: 100px;
+	}
+
+	button {
+		width: 500px;
+		height: 60px;
+		margin: 30px;
+	}
+</style>
+
+</head>
+
+<body>
+
+<div>
+	<div class="o">
+		<div class="t">
+			<img src="https://cdn.dribbble.com/users/374101/screenshots/5885738/media/7dbcbf342c8c28857735444895fb5c65.gif">
+		</div>
+
+		<div class="r">
+			<h1>Let's do a Math challenge!</h1>
+			<br/>
+			<br/>
+			<h3>Given:</h3>
+			<br/ >
+			<form>
+		        <div class="mb-3"> 
+		            <label class="form-label" for="x_val">Enter a value for x</label>
+		            <input type="number" class="form-control" id="x_val" placeholder="Enter x value">
+		        </div>
+		        <div class="mb-3"> 
+		            <label class="form-label" for="y_val">Enter a value for y</label>
+		            <input type="number" class="form-control" id="y_val" placeholder="Enter y value">
+		        </div>
+		    </form>
+
+		    <br />
+		    <br />
+		    <br />
+
+		    <strong><p>▽ Click the buttons below to get answers using different operations ▽</p></strong>
+		</div>
+	</div>
+
+	<div class="btns">
+		<form>
+		<div class="fs">
+			<button class="btn btn-success" id="add"><h5>x plus y</h5></button>
+			<button class="btn btn-primary" id="subtract"><h5> x minus y</h5></button>
+		</div>
+		<div class="sc">
+			<button class="btn btn-danger" id="multiply"><h5> x multiplied by y</h5></button>
+			<button class="btn btn-warning" id="divide"><h5> x divided by y</h5></button>
+		</div>
+		</form>
+	</div>
+</div>
+
+<script>
+            function Addition() {
+                var x = parseInt( document.getElementById("x_val").value );
+                var y = parseInt( document.getElementById("y_val").value );
+                var z = x + y;
+                alert( x + " plus " + y + " is equal to " + z );
+                //x + y =z
+            }
+            document.getElementById( "add" ).onclick = Addition;
+            
+            function Subtraction() {
+                var x = parseInt( document.getElementById("x_val").value );
+                var y = parseInt( document.getElementById("y_val").value );
+                var z = x - y;
+                alert( x + " minus " + y + " is equal to " + z );
+                //x - y = z
+            }
+            document.getElementById( "subtract" ).onclick = Subtraction;
+            
+            function Multiplication() {
+                var x = parseInt( document.getElementById("x_val").value );
+                var y = parseInt( document.getElementById("y_val").value );
+                var z = x * y;
+                alert( x + " times " + y + " is equal to " + z );
+                //x * y = z
+            }
+            document.getElementById( "multiply" ).onclick = Multiplication;
+            
+            function Division() {
+                var x = parseInt( document.getElementById("x_val").value );
+                var y = parseInt( document.getElementById("y_val").value );
+                var z = x / y;
+                alert( x + " divided by " + y + " is equal to " + z );
+                //x / y = z
+            }
+            document.getElementById( "divide" ).onclick = Division;
+            
+</script>
+
+</body>
+</html>
